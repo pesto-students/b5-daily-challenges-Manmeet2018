@@ -1,7 +1,7 @@
-function isTriangle(...args) {
-  return args[0] + args[1] > args[2]
-      && args[1] + args[2] > args[0]
-      && args[2] + args[0] > args[1];
+function isTriangle(...sides) {
+  return sides[0] + sides[1] > sides[2]
+      && sides[1] + sides[2] > sides[0]
+      && sides[2] + sides[0] > sides[1];
 }
 
 export {
