@@ -22,10 +22,10 @@ function* generatePrimeNumbers(number) {
     i += 1;
   }
 }
-function sumPrimes(numberUpto) {
-  isNumber(numberUpto);
+function sumPrimes(upto) {
+  isNumber(upto);
   let PrimeSum = 0;
-  const iter = generatePrimeNumbers(numberUpto);
+  const iter = generatePrimeNumbers(upto);
   for (const el of iter) {
     PrimeSum += el;
   }
