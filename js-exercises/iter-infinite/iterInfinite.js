@@ -13,21 +13,15 @@ function* cycle(iter, noOfTimes = Infinity) {
   if (!isIterable(iter)) {
     throw new TypeError(`Input type has to be Iterator not ${typeof iter}`);
   }
-  let repetition = noOfTimes;
-  while (repetition) {
-    for (const el of iter) {
-      yield el;
-    }
-    repetition -= 1;
+  // let repetition = noOfTimes;
+  while (noOfTimes) {
+    yield* iter;
+    noOfTimes -= 1;
   }
 }
 
 function* repeat(value, noOfTines = Infinity) {
-  let repetition = noOfTines;
-  while (repetition) {
-    yield value;
-    repetition -= 1;
-  }
+  yield* cycle([value], noOfTines);
 }
 
 export { count, cycle, repeat };
