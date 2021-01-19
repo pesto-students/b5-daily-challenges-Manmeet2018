@@ -13,7 +13,7 @@ function* cycle(iter, noOfTimes = Infinity) {
   if (!isIterable(iter)) {
     throw new TypeError(`Input type has to be Iterator not ${typeof iter}`);
   }
-  // let repetition = noOfTimes;
+
   while (noOfTimes) {
     yield* iter;
     noOfTimes -= 1;
