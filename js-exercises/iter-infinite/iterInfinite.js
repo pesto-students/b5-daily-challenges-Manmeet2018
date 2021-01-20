@@ -20,8 +20,8 @@ function* cycle(iter, noOfTimes = Infinity) {
   }
 }
 
-function* repeat(value, noOfTines = Infinity) {
-  yield* cycle([value], noOfTines);
+function* repeat(value, noOfTimes = Infinity) {
+  yield* cycle([value], noOfTimes);
 }
 
 export { count, cycle, repeat };
